@@ -1,0 +1,141 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SignalCard from "../components/SignalCard.astro";
+import PerformanceDial from "../components/PerformanceDial";
+
+const signals = [
+  {
+    eyebrow: "Ownership",
+    title: "From brief to browser to final validation",
+    body: "A delivery mindset that spans implementation, QA, polish, and stakeholder confidence before anything reaches review."
+  },
+  {
+    eyebrow: "Architecture",
+    title: "Astro where speed matters, React where interaction earns its keep",
+    body: "A composable approach that keeps islands intentional, payloads light, and long-term maintenance sane."
+  },
+  {
+    eyebrow: "CMS Thinking",
+    title: "Content models that help editors move faster",
+    body: "Structured page builders, navigation systems, and schema choices designed for real editorial workflows, not just developer convenience."
+  },
+  {
+    eyebrow: "Client Trust",
+    title: "Translate technical detail into business clarity",
+    body: "Performance gains, tradeoffs, and roadmap decisions framed in language that makes clients and leads feel confident."
+  }
+];
+
+const operatingSystem = [
+  "Profile the problem before prescribing the fix.",
+  "Choose SSR, SSG, ISR, or islands based on runtime value, not habit.",
+  "Model CMS content for scale, governance, and editor sanity.",
+  "Leave clean TypeScript and a maintainable surface area behind.",
+  "Explain what changed, why it matters, and what risk remains."
+];
+---
+
+<BaseLayout
+  title="Front-end Engineer Showcase"
+  description="A bold Astro project crafted to stand out to a tech lead or interviewer."
+>
+  <main class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(105,255,226,0.14),transparent_24%),radial-gradient(circle_at_80%_10%,rgba(255,120,82,0.18),transparent_20%),linear-gradient(180deg,#07111a_0%,#091823_44%,#07111a_100%)]"></div>
+    <div class="absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent)] opacity-40 [mask-image:repeating-linear-gradient(90deg,black_0,black_1px,transparent_1px,transparent_120px)]"></div>
+
+    <section class="mx-auto max-w-7xl px-6 pb-20 pt-8 sm:px-8 lg:px-10 lg:pb-28 lg:pt-12">
+      <div class="inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/6 px-4 py-2 text-xs uppercase tracking-[0.25em] text-white/70 backdrop-blur">
+        <span class="h-2 w-2 rounded-full bg-[var(--color-mint)] shadow-[0_0_20px_var(--color-mint)]"></span>
+        Astro x React x Tailwind x Performance-first delivery
+      </div>
+
+      <div class="mt-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
+        <div>
+          <p class="max-w-2xl text-sm uppercase tracking-[0.35em] text-[var(--color-sand)]">Designed for the kind of team that values shipping and clarity</p>
+          <h1 class="mt-5 max-w-4xl text-5xl font-semibold leading-none text-white sm:text-6xl lg:text-8xl">
+            Front-end engineer
+            <span class="block text-[var(--color-mint)]">with delivery instincts</span>
+          </h1>
+          <p class="mt-6 max-w-2xl text-base leading-8 text-white/76 sm:text-lg">
+            This concept page is intentionally built like a mini client pitch: bold visual direction, strong Astro fundamentals,
+            one purposeful island, and a narrative centered on ownership, performance, maintainability, and editor experience.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#proof" class="rounded-full bg-[var(--color-mint)] px-6 py-3 text-sm font-medium text-[var(--color-ink)] transition hover:scale-[1.02] hover:shadow-[0_10px_40px_rgba(105,255,226,0.25)]">
+              Review the proof
+            </a>
+            <a href="#system" class="rounded-full border border-white/12 bg-white/5 px-6 py-3 text-sm font-medium text-white transition hover:border-white/30 hover:bg-white/10">
+              See the operating system
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_top_left,rgba(105,255,226,0.22),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(255,120,82,0.2),transparent_34%)] blur-2xl"></div>
+          <div class="relative overflow-hidden rounded-[2rem] border border-white/12 bg-black/20 p-6 shadow-[0_30px_120px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+            <div class="flex items-center justify-between text-xs uppercase tracking-[0.25em] text-white/48">
+              <span>Delivery snapshot</span>
+              <span>Tech-lead view</span>
+            </div>
+            <div class="mt-6 grid gap-4">
+              <div class="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
+                <p class="text-sm text-white/60">Framework strategy</p>
+                <p class="mt-2 text-2xl font-semibold text-white">Astro foundation with selective React islands</p>
+              </div>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div class="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
+                  <p class="text-sm text-white/60">Primary strengths</p>
+                  <p class="mt-2 text-3xl font-semibold text-[var(--color-mint)]">CWV + DX</p>
+                </div>
+                <div class="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
+                  <p class="text-sm text-white/60">Content mindset</p>
+                  <p class="mt-2 text-3xl font-semibold text-[var(--color-sand)]">Schema-first</p>
+                </div>
+              </div>
+              <div class="rounded-[1.5rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))] p-5">
+                <p class="text-sm leading-7 text-white/74">
+                  Strong fit for teams that need someone who can debug performance bottlenecks, design sane content systems,
+                  speak clearly with clients, and still deliver polished production-ready work without hand-holding.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proof" class="mx-auto max-w-7xl px-6 py-14 sm:px-8 lg:px-10">
+      <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        {signals.map((signal) => <SignalCard {...signal} />)}
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-14 sm:px-8 lg:px-10">
+      <PerformanceDial client:visible />
+    </section>
+
+    <section id="system" class="mx-auto max-w-7xl px-6 py-14 sm:px-8 lg:px-10">
+      <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <p class="text-xs uppercase tracking-[0.35em] text-[var(--color-sand)]">Working style</p>
+          <h2 class="mt-4 text-4xl font-semibold text-white sm:text-5xl">An operating system built for modern front-end delivery</h2>
+          <p class="mt-5 max-w-lg text-base leading-8 text-white/72">
+            This is my system of operation when aproaching a performance issue. Using this system consistently allows me to work with independent ownership, take into account CMS architecture, performance rigor, and client-facing clarity.
+          </p>
+        </div>
+
+        <div class="grid gap-4">
+          {operatingSystem.map((item, index) => (
+            <div class="flex gap-4 rounded-[1.75rem] border border-white/10 bg-white/5 p-5 backdrop-blur">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-mint)]/14 text-sm font-semibold text-[var(--color-mint)]">
+                0{index + 1}
+              </div>
+              <p class="pt-1 text-base leading-7 text-white/78">{item}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

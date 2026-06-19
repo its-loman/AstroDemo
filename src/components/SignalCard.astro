@@ -1,0 +1,16 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  body: string;
+}
+
+const { eyebrow, title, body } = Astro.props;
+---
+
+<article class="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-[var(--color-mint)]/40 hover:bg-white/8">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(105,255,226,0.16),transparent_32%)] opacity-0 transition duration-300 group-hover:opacity-100"></div>
+  <p class="relative text-xs uppercase tracking-[0.3em] text-[var(--color-mint)]">{eyebrow}</p>
+  <h3 class="relative mt-4 text-2xl font-semibold text-white">{title}</h3>
+  <p class="relative mt-3 text-sm leading-7 text-white/72">{body}</p>
+</article>
